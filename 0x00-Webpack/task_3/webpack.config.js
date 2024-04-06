@@ -43,26 +43,21 @@ module.exports = {
   performance: {
     maxAssetSize: 1000000,
   },
-  resolve: {
-    alias: {
-      'jquery': require.resolve('jquery'),
-    },
-  },
   module: {
     rules: [
       {
         test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
+        use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.(?:ico|gif|png|jpe?g|svg)$/i,
         type: 'asset/resource',
         use: [
-          "file-loader",
+          'file-loader',
           {
-            loader: "image-webpack-loader",
+            loader: 'image-webpack-loader',
             options: {
-              bypassOnDebug: true,
+              bypassingOnDebug: true,
               disable: true,
             },
           },
